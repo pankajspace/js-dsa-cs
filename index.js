@@ -1,1 +1,14 @@
-console.log("Hello World!");
+// require("./src/01-frequency-counter");
+// require("./src/02-multiple-pointers");
+// require("./src/03-sliding-window");
+// require("./src/04-divide-conquer");
+// require("./src/05-recursion");
+// require("./src/06-search-linear");
+// require("./src/07-search-binary");
+// require("./src/08-search-native");
+// require("./src/09-bubble-sort");
+// require("./src/10-selection-sort");
+// require("./src/11-insertion-sort");
+// require("./src/12-merge-sort");
+// require("./src/13-quick-sort");
+// require("./src/14-radix-sort");
