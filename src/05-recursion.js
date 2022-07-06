@@ -1,29 +1,29 @@
 // factorial simple recursion
 function factorial(num) {
-  if (num == 1) { return 1 }
+  if (num < 3) { return num }
   return num * factorial(num - 1);
 }
-console.log(factorial(3));
+// console.log(factorial(3));
 
 // -----------------------------------------------------------
 
 // factorial short
 // 5 * 4 * 3 * 2 * 1
-const fact = (num) => num < 3 ? num : fact(num - 1) * num;
-console.log(fact(3));
+const fact = num => num < 3 ? num : fact(num - 1) * num;
+// console.log(fact(3));
 
 // ----------------------------------------------------------
 
 // recursion using helper method
 // collect all odd elements in array
-function collectOddValues(arr) {
+function collectOddValuesHelper(arr) {
   let result = [];
 
   function helper(helperInput) {
     if (helperInput.length === 0) {
       return;
     }
-    if (helperInput[0] % 2 !== 0) {
+    if (helperInput[0] % 2 == 0) {
       result.push(helperInput[0])
     }
     helper(helperInput.slice(1))
@@ -32,7 +32,7 @@ function collectOddValues(arr) {
 
   return result;
 }
-console.log(collectOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+// console.log(collectOddValuesHelper([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
 // ----------------------------------------------------------
 
@@ -48,12 +48,10 @@ function collectOddValues(arr) {
     newArr.push(arr[0]);
   }
 
-  // newArr = newArr.concat(collectOddValues(arr.slice(1)));
-  // return newArr;
-
+  // return newArr.concat(collectOddValues(arr.slice(1)));
   return [...newArr, ...collectOddValues(arr.slice(1))]
 }
-console.log(collectOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+// console.log(collectOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9]))
 
 // ------------------------------------------------------------
 
@@ -61,7 +59,7 @@ console.log(collectOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9]))
 // 0 1 1 2 3 5 8 13 21 34 55
 let steps = 0;
 const fibonnaci = (position) => {
-  steps++
+  steps++;
   return position < 2 ? position : fibonnaci(position - 1) + fibonnaci(position - 2);
 }
 console.log('fibonnaci: ' + fibonnaci(6) + ', steps: ' + steps);
@@ -69,8 +67,8 @@ console.log('fibonnaci: ' + fibonnaci(6) + ', steps: ' + steps);
 // -----------------------------------------------------
 
 // fibonnaci short
-const fib = (position) => position < 2 ? position : fib(position - 1) + fib(position - 2);
-fib(6);
+const fib = position => position < 2 ? position : fib(position - 1) + fib(position - 2);
+// console.log(fib(6));
 
 // ----------------------------------------------------------
 
@@ -82,7 +80,7 @@ function fibonnaciMemoized(position) {
   if (position in cache) {
     return cache[position];
   } else {
-    return cache[position] = position < 2 ? position : fibonnaci(position - 1) + fibonnaci(position - 2);
+    return cache[position] = position < 2 ? position : fibonnaciMemoized(position - 1) + fibonnaciMemoized(position - 2);
   }
 }
-console.log('fibonnaciMemoized: ' + fibonnaciMemoized(6) + ', stepsMemoized: ' + stepsMemoized); 
+console.log('fibonnaciMemoized: ' + fibonnaciMemoized(6) + ', stepsMemoized: ' + stepsMemoized);

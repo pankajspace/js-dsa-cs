@@ -10,5 +10,5 @@ const binarySearch = (arr, item) => {
   }
   return arr[middle] == item ? middle : -1;
 }
-binarySearch([1, 4, 8, 12, 35, 47, 65, 72, 87, 95], 65);
+console.log(binarySearch([1, 4, 8, 12, 35, 47, 65, 72, 87, 95, 98], 65));
 // binarySearch([1,4,8,12,35,47,65,72,87,95], 651);
