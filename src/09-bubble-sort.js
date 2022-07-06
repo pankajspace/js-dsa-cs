@@ -8,11 +8,11 @@ const bubbleSort = (array) => {
         array[j + 1] = temp;
       }
     }
+    // console.log(array)
+    // console.log("-------------------------");
   }
+  // return JSON.stringify(array);
   return array;
 }
-
-bubbleSort([3, 6, 8, -1, -2, 9, 2, 1, 4, 0, 7, 5, 9]);
-//          i
-//                                                j
-// temp = 9
+// console.log(bubbleSort([3, 6, 8, -1, -2, -8, 2, 1, 4, 0, 7, 9, 5]));
+console.log(bubbleSort([2, 3, 1]));
