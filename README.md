@@ -1,5 +1,5 @@
 # js-dsa-cs
 
-# dynamic programming: 
+### dynamic programming theory: 
 https://cs.slides.com/colt_steele/dynamic-programming
 
