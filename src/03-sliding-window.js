@@ -17,7 +17,7 @@ const longestUniqueCharSubstring = (str) => {
     if (seen[char]) {
       // Check if start index is greater than current character's last index
       start = Math.max(start, seen[char]);
-      console.log('start---------------------->', start);
+      console.log('start', start);
     }
     // If new substring is longer than older
     if (longest < next - start + 1) {
@@ -39,13 +39,13 @@ const longestUniqueCharSubstring = (str) => {
   return longest;
 }
 // console.log(longestUniqueCharSubstring('pankaj')); //  4
-console.log(longestUniqueCharSubstring('pankajwakchaure')); //  4
+// console.log(longestUniqueCharSubstring('pankajwakchaure')); //  4
 
 // ------------------------------------------------------------------
 
 // find a max subarray sum of elements next to one another
-// maxSubarraySum([1,8,5,2,9,0,8,1],2); output: 13
-// maxSubarraySum([1,2,5,2,8,1,5],4); output: 17
+// maxSubarraySum([1, 8, 5, 2, 9, 0, 8, 1], 2); output: 13
+// maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4); output: 17
 function maxSubarraySum(arr, num) {
   if (!arr.length) {
     return 0;
@@ -67,15 +67,16 @@ function maxSubarraySum(arr, num) {
   }
   return maxSum;
 }
-console.log(maxSubarraySum([0], 2));
-console.log(maxSubarraySum([1], 2));
-console.log(maxSubarraySum([1, 2], 2));
-console.log(maxSubarraySum([1, 8, 5, 2, 9, 0, 8, 1], 2));
-console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4));
+// console.log(maxSubarraySum([0], 2));
+// console.log(maxSubarraySum([1], 2));
+// console.log(maxSubarraySum([1, 2], 2));
+// console.log(maxSubarraySum([1, 8, 5, 2, 9, 0, 8, 1], 2));
+// console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4));
 
 // -----------------------------------------------------
-// minSubArrayLen([2, 3, 1, 2, 4, 3], 7)  //  2
-// minSubArrayLen([2, 3, 1, 2, 4, 4], 6)  //  3
+
+// console.log(minSubArrayLen([2, 3, 1, 2, 4, 3], 7))  //  2
+// console.log(minSubArrayLen([2, 3, 1, 2, 4, 4], 6))  //  3
 function minSubArrayLen(nums, sum) {
   let total = 0;
   let start = 0;
@@ -106,8 +107,9 @@ function minSubArrayLen(nums, sum) {
 }
 
 // ----------------------------------------------------
+
 // find longest substring with all distinct characters
-// findLongestSubstring('hello')  //  3
+console.log(findLongestSubstring('hellohihowwdy')) //  3
 function findLongestSubstring(str) {
   let longest = 0;
   let seen = {};
