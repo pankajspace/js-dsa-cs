@@ -13,4 +13,5 @@
 // require("./src/13-quick-sort");
 // require("./src/14-radix-sort");
 // require("./src/15-singly-linked-list");
-require("./src/16-doubly-linked-list");
+// require("./src/16-doubly-linked-list");
+require("./src/17-stack");
