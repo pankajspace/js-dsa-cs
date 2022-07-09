@@ -1,5 +1,5 @@
 // require("./src/01-frequency-counter");
-// require("./src/02-multiple-pointers");
+require("./src/02-multiple-pointers");
 // require("./src/03-sliding-window");
 // require("./src/04-divide-conquer");
 // require("./src/05-recursion");

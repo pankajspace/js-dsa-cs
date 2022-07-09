@@ -24,8 +24,8 @@ function matchPair(arr) {
   return false;
 }
 
-console.log(matchPair([-4, -2, 1, 3, 4]));
-console.log(matchPair([-4, -2, 1, 3, 5]));
+// console.log(matchPair([-4, -2, 1, 3, 4]));
+// console.log(matchPair([-4, -2, 1, 3, 5]));
 
 // --------------------------------------------------------
 
@@ -53,9 +53,9 @@ function countUniques(arr) {
   // console.log(arr2);
   return arr2.length;
 }
-console.log(countUniques([]));
-console.log(countUniques([0]));
-console.log(countUniques([1, 1, 2, 2, 2, 3, 5, 8, 8, 9]));
+// console.log(countUniques([]));
+// console.log(countUniques([0]));
+// console.log(countUniques([1, 1, 2, 2, 2, 3, 5, 8, 8, 9]));
 
 // -------------------------------------------------------
 
@@ -79,8 +79,9 @@ function areThereDuplicates(...args) {
 
 // ------------------------------------------------
 
-// averagePair([1, 2, 3], 2.5)  // true
-// averagePair([1, 2, 3, 4], 1.5)  // true
+// check whether the pair with the given average is present in array
+console.log(averagePair([1, 2, 3], 2.5));  // true
+console.log(averagePair([1, 3, 6, 8], 5));  // false
 function averagePair(arr, num) {
   let start = 0
   let end = arr.length - 1;

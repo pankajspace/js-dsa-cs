@@ -22,8 +22,6 @@ const checkSquared = (arr1, arr2) => {
     obj2[elem] = (obj2[elem] || 0) + 1;
   }
 
-  console.log(obj1, obj2)
-
   for (let key in obj1) {
     if (!obj2[key ** 2]) {
       return false;
@@ -37,8 +35,8 @@ const checkSquared = (arr1, arr2) => {
 }
 
 console.log(checkSquared([2, 3, 3], [9, 4, 9]))
-console.log(checkSquared([2, 3], [9, 4, 4]))
-console.log(checkSquared([2, 3], [9, 1]))
+// console.log(checkSquared([2, 3], [9, 4, 4]))
+// console.log(checkSquared([2, 3], [9, 1]))
 
 // similar problems
 // anagram of string : abcd, cdba; abcdd, cdabd
@@ -71,8 +69,8 @@ const isValidAnagram = (str1, str2) => {
   return true;
 }
 
-console.log(isValidAnagram('pankaj', 'nakjap'));
-console.log(isValidAnagram('pankaj', 'nakiap'));
+// console.log(isValidAnagram('pankaj', 'nakjap'));
+// console.log(isValidAnagram('pankaj', 'nakiap'));
 
 // -------------------------------------------------
 
